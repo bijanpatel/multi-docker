@@ -15,10 +15,10 @@ after_success:
 - docker build -t bijand1/multi-nginx ./nginx
 
 #Login to docker CLI, pwd escape issue fix
--echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 #Take those images and push in docker hub
--docker push bijand1/multi-client
--docker push bijand1/multi-nginx
--docker push bijand1/multi-worker
--docker push bijand1/multi-server
+- docker push bijand1/multi-client
+- docker push bijand1/multi-nginx
+- docker push bijand1/multi-worker
+- docker push bijand1/multi-server
